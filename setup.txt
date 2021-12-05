@@ -1,0 +1,18 @@
+# Custom aliases
+alias update='sudo apt update && sudo apt upgrade -y'
+alias rs='./manage.py runserver'
+alias mm='./manage.py makemigrations'
+alias m='./manage.py migrate'
+alias install='sudo apt install'
+alias remove='sudo apt-get purge'
+alias cl='conda info --envs'
+alias ca='conda activate'
+alias cr='conda env remove -n'
+alias cc='conda create --name'
+alias sp='./manage.py shell_plus'
+
+
+# Add git branch to terminal
+export GIT_PS1_SHOWDIRTYSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n ∟ 👾 ';
