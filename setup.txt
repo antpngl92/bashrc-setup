@@ -1,18 +1,30 @@
 # Custom aliases
+
+## OS related
 alias update='sudo apt update && sudo apt upgrade -y'
+alias install='sudo apt install'
+alias uninstall='sudo apt-get purge'
+
+## Venv related
+alias ca='conda activate'
+alias cod='conda deactivate'
+alias cl='conda info --envs'
+alias cr='conda env remove -n'
+alias cc='conda create --name'
+
+
+## Django related
 alias rs='./manage.py runserver'
 alias mm='./manage.py makemigrations'
 alias m='./manage.py migrate'
-alias install='sudo apt install'
-alias remove='sudo apt-get purge'
-alias cl='conda info --envs'
-alias ca='conda activate'
-alias cr='conda env remove -n'
-alias cc='conda create --name'
 alias sp='./manage.py shell_plus'
+alias spp='sp --print-sql'
+
+## PSQL related
+alias psql='sudo -i -u postgres'
 
 
-# Add git branch to terminal
+# Shell output
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 export PS1='\[\033[32m\]\u@\h\[\033[00m\]:\[\033[34m\]\w\[\033[31m\]$(__git_ps1)\[\033[00m\]\n ∟ 👾 ';
